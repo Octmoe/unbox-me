@@ -51,6 +51,26 @@ If none of the breaks moves the boundary far enough, the skill escalates exactly
 
 **detail → component → system → objective → problem frame**
 
+## Prompt-only version
+
+If the skill is not installed, copy and paste this prompt directly:
+
+```text
+Perform a design unboxing process on the current design.
+
+The design appears to have converged, but I am still dissatisfied and may not be able to explain exactly why.
+
+First, infer 3 to 5 potentially problematic leaf nodes from different branches of the design tree. Treat them as hypotheses, not facts. For each node, propose one small, contrasting change so I can judge whether it feels closer, farther away, or irrelevant.
+
+Once a likely node is found, identify the assumption holding it in place. Provide structural alternatives by deleting, reversing, or replacing that assumption. Do not merely patch, fine-tune, or rename the existing design.
+
+If the change is still not enough, move up exactly one level:
+
+detail → component → system → objective → problem frame
+
+Treat only the constraints I explicitly declare non-negotiable as fixed. Stop as soon as a meaningful new direction emerges, then summarize what was preserved, what was broken, and what new possibilities were opened.
+```
+
 ## Example prompts
 
 | Use case | Try this |
