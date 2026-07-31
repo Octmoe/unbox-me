@@ -1,0 +1,4 @@
+interface:
+  display_name: "Unbox Me"
+  short_description: "Reopen prematurely converged creative work"
+  default_prompt: "Use $unbox-me to reopen this idea before we settle on a direction."
