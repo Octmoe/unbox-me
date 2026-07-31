@@ -17,9 +17,6 @@ AI is very good at making the first plausible direction look finished. The polis
 
 Unbox Me interrupts premature convergence. It helps you expose the assumption holding a design in place, test vague dissatisfaction with concrete contrasts, and explore structurally different directions before implementation makes the current path expensive to leave.
 
-> [!IMPORTANT]
-> Unbox Me is not a prompt for producing a longer list of ideas. It is a process for discovering when many ideas are still variants of the same underlying structure.
-
 ## At a glance
 
 | When you notice… | Unbox Me will… | So you can… |
