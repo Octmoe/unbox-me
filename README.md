@@ -26,6 +26,16 @@ Unbox Me interrupts premature convergence. It helps you expose the assumption ho
 | A system is accumulating patches | Expose the assumption holding the branch in place | Reconsider the architecture before adding more machinery |
 | You cannot explain what feels wrong | Ask for **closer / farther / irrelevant** comparisons | Respond to concrete alternatives instead of abstract questions |
 
+## Recommended: let your agent install and explain it
+
+If the current agent can access the network and write to the local filesystem, this is the easiest way to start:
+
+```text
+Install the Unbox Me skill from https://github.com/Octmoe/unbox-me into this environment's local skills directory. Preserve the inner unbox-me directory structure, make sure SKILL.md is directly inside the installed skill folder, and verify that the skill can be discovered and invoked after installation. Once it is ready, briefly explain what Unbox Me does, when I should use it, and give one example based on my current work.
+```
+
+The agent may ask for permission before downloading or writing files.
+
 ## How it works
 
 ```mermaid
@@ -105,16 +115,6 @@ The installed folder should contain `SKILL.md` directly:
 ```
 
 Restart Codex if the skill does not appear immediately.
-
-### Let an agent install it
-
-If the current agent can access the network and write to the local filesystem, you can usually give it this instruction:
-
-```text
-Install the Unbox Me skill from https://github.com/Octmoe/unbox-me into this environment's local skills directory. Preserve the inner unbox-me directory structure, make sure SKILL.md is directly inside the installed skill folder, and verify that the skill can be discovered and invoked after installation.
-```
-
-The agent may ask for permission before downloading or writing files.
 
 ## Use
 

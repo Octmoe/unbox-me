@@ -26,6 +26,16 @@ Unbox Me 用来打断这种过早收敛。它会找出把当前设计固定住�
 | 系统不断累积补丁 | 暴露维持当前分支的关键假设 | 在增加更多机制前重新考虑架构 |
 | 说不清楚哪里不对 | 让你比较 **更接近 / 更远离 / 无关** | 回应具体差异，而不是解释抽象感受 |
 
+## 推荐：让 Agent 自行安装并讲解
+
+如果当前 Agent 具有网络访问和本地文件写入权限，这是最省事的开始方式：
+
+```text
+请将 https://github.com/Octmoe/unbox-me 中的 Unbox Me Skill 安装到当前环境的本地 Skills 目录。保留仓库内层 unbox-me 目录的结构，确保 SKILL.md 直接位于安装后的 Skill 目录中，并在安装完成后验证该 Skill 可以被发现和调用。安装完成后，请向我简要说明 Unbox Me 的作用、适合在什么情况下使用，并结合我当前的工作给出一个例子。
+```
+
+Agent 可能会在下载或写入文件前请求授权。
+
 ## 工作方式
 
 ```mermaid
@@ -105,16 +115,6 @@ git clone https://github.com/Octmoe/unbox-me.git
 ```
 
 如果 Skill 没有立即出现，请重启 Codex。
-
-### 让 Agent 自行安装
-
-如果当前 Agent 具有网络访问和本地文件写入权限，通常可以直接对它说：
-
-```text
-请将 https://github.com/Octmoe/unbox-me 中的 Unbox Me Skill 安装到当前环境的本地 Skills 目录。保留仓库内层 unbox-me 目录的结构，确保 SKILL.md 直接位于安装后的 Skill 目录中，并在安装完成后验证该 Skill 可以被发现和调用。
-```
-
-Agent 可能会在下载或写入文件前请求授权。
 
 ## 使用
 
