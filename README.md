@@ -106,6 +106,16 @@ The installed folder should contain `SKILL.md` directly:
 
 Restart Codex if the skill does not appear immediately.
 
+### Let an agent install it
+
+If the current agent can access the network and write to the local filesystem, you can usually give it this instruction:
+
+```text
+Install the Unbox Me skill from https://github.com/Octmoe/unbox-me into this environment's local skills directory. Preserve the inner unbox-me directory structure, make sure SKILL.md is directly inside the installed skill folder, and verify that the skill can be discovered and invoked after installation.
+```
+
+The agent may ask for permission before downloading or writing files.
+
 ## Use
 
 Invoke the skill explicitly:
@@ -115,6 +125,20 @@ Use $unbox-me to reopen this idea before we settle on a direction.
 ```
 
 Codex can also select it automatically when a creative, design, strategy, architecture, or writing task shows signs of premature convergence.
+
+## Use with other agent harnesses
+
+Unbox Me is intentionally lightweight: it has no scripts, model-specific tool calls, or external service dependencies. Its behavior lives in [`unbox-me/SKILL.md`](unbox-me/SKILL.md), while the use cases are optional references. Most harnesses that support reusable instructions or prompt modules can adapt it with little work:
+
+1. Copy the `SKILL.md` instructions into the harness's skill or instruction format.
+2. Adapt the frontmatter and trigger description to the harness's registration convention.
+3. Replace the explicit `$unbox-me` invocation with that harness's invocation syntax.
+4. Keep `references/use-cases.md` as an optional example library.
+5. Use the [prompt-only version](#prompt-only-version) as a quick migration test.
+
+`agents/openai.yaml` contains Codex-specific interface metadata. Other harnesses can omit it or rewrite it in their own metadata format.
+
+If a harness has no skill system, use the prompt-only version as a reusable system, developer, or user prompt.
 
 ## Repository layout
 

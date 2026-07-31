@@ -106,6 +106,16 @@ git clone https://github.com/Octmoe/unbox-me.git
 
 如果 Skill 没有立即出现，请重启 Codex。
 
+### 让 Agent 自行安装
+
+如果当前 Agent 具有网络访问和本地文件写入权限，通常可以直接对它说：
+
+```text
+请将 https://github.com/Octmoe/unbox-me 中的 Unbox Me Skill 安装到当前环境的本地 Skills 目录。保留仓库内层 unbox-me 目录的结构，确保 SKILL.md 直接位于安装后的 Skill 目录中，并在安装完成后验证该 Skill 可以被发现和调用。
+```
+
+Agent 可能会在下载或写入文件前请求授权。
+
 ## 使用
 
 显式调用：
@@ -115,6 +125,20 @@ git clone https://github.com/Octmoe/unbox-me.git
 ```
 
 当创意、设计、策略、架构或写作任务出现过早收敛的迹象时，Codex 也可以自动选择这个 Skill。
+
+## 迁移到其他 Agent Harness
+
+Unbox Me 有意保持轻量：不包含脚本、特定模型的工具调用或外部服务依赖。核心行为位于 [`unbox-me/SKILL.md`](unbox-me/SKILL.md)，用例只是可选参考。因此，大多数支持可复用指令或提示词模块的 harness 都可以轻松适配：
+
+1. 将 `SKILL.md` 中的指令复制到该 harness 的 Skill 或指令格式中。
+2. 按照该 harness 的注册方式调整 frontmatter 和触发描述。
+3. 将显式调用语法 `$unbox-me` 替换为该 harness 的调用方式。
+4. 将 `references/use-cases.md` 作为可选的用例库保留。
+5. 使用[直接使用的提示词](#直接使用的提示词)进行快速迁移测试。
+
+`agents/openai.yaml` 保存的是 Codex 专用界面元数据。其他 harness 可以忽略它，或改写为自己的元数据格式。
+
+如果某个 harness 没有 Skill 系统，可以直接把提示词版本用作可复用的 system、developer 或 user prompt。
 
 ## 仓库结构
 
