@@ -124,7 +124,7 @@ Invoke the skill explicitly:
 Use $unbox-me to reopen this idea before we settle on a direction.
 ```
 
-Codex can also select it automatically when a creative, design, strategy, architecture, or writing task shows signs of premature convergence.
+Codex should select it automatically only after the user signals dissatisfaction with an existing direction, repeated convergence on similar variants, or a desire to challenge the assumptions holding that direction in place. Ordinary creative work or requests for alternatives do not trigger it by themselves.
 
 ## Use with other agent harnesses
 

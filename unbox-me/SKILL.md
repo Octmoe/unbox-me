@@ -1,11 +1,23 @@
 ---
 name: unbox-me
-description: Reopen a creative problem, design, plan, architecture, narrative, or solution that has converged too early on its first plausible answer. Use when work feels generic, safe, over-polished, locally optimized, or vaguely wrong; when brainstorming keeps producing variants of one idea; or before implementation when structural alternatives should be explored.
+description: Reopen a creative problem, design, plan, architecture, narrative, or solution after the user signals that it may have converged too early. Use only when the user explicitly invokes $unbox-me, expresses dissatisfaction with an existing direction (such as generic, safe, over-polished, stuck, or vaguely wrong), says brainstorming keeps producing variants of one idea, or asks to challenge the assumptions holding the current direction in place. Do not use for ordinary creative work, early-stage brainstorming, routine critique, requests for alternatives, or implementation planning without one of those user signals.
 ---
 
 # Unbox Me
 
 Reopen the design space from the leaves upward. Do not optimize a branch that may be wrong.
+
+## Activation gate
+
+Apply this workflow only when at least one of these signals comes from the user:
+
+- Explicitly invoke `$unbox-me` or ask to reopen the design space.
+- Express dissatisfaction with an existing or apparently converged direction.
+- Say the work feels generic, safe, stuck, over-polished, vaguely wrong, or trapped in local refinement.
+- Say the available ideas are repeated variants of the same branch.
+- Ask to challenge underlying assumptions because the current direction may be wrong.
+
+If none is present, do not apply or announce this skill. Continue with the normal task workflow. Do not infer dissatisfaction merely because the task is creative, ambiguous, or could benefit from alternatives.
 
 ## Rules
 
